@@ -1,0 +1,45 @@
+@font-face {
+  font-family: custom-regular;
+  src: url(../../public/fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: custom-semi;
+  src: url(../../public/fonts/Lato-Semibold.ttf);
+}
+@font-face {
+  font-family: custom-bold;
+  src: url(../../public/fonts/Lato-Bold.ttf);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+a:hover, a:active, a:focus, div:hover, div:active, div:focus, li:hover, li:active, li:focus {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: custom-regular, Manrope, sans-serif;
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    min-width: 320px;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

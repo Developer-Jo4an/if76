@@ -1,0 +1,29 @@
+@font-face {
+  font-family: custom-regular;
+  src: url(../../public/fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: custom-semi;
+  src: url(../../public/fonts/Lato-Semibold.ttf);
+}
+@font-face {
+  font-family: custom-bold;
+  src: url(../../public/fonts/Lato-Bold.ttf);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: custom-regular, Manrope, sans-serif;
+}
+
+/*# sourceMappingURL=zeroing.css.map */
