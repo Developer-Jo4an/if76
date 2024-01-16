@@ -1,0 +1,25 @@
+.modal-window-center {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(35, 35, 35, 0.5);
+  transition: 0.3s;
+  pointer-events: all;
+  z-index: 99;
+}
+
+.modal-window-hide-mode {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal-window-center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=modal-window-center.css.map */

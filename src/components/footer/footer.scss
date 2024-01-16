@@ -1,0 +1,37 @@
+@import '../../styles/global';
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $main-black-color;
+
+    padding: 20px;
+
+    color: #fff;
+
+    font-size: 12px;
+}
+
+.footer-wrapper {
+    width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-right-section, .footer-left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-main-info-link {
+    transition: .3s;
+
+    cursor: pointer;
+
+    &:hover, &:active { opacity: 0.7 }
+}

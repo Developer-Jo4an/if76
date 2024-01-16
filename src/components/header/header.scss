@@ -36,6 +36,8 @@ header {
 
     background-color: $main-black-color;
 
+    z-index: 90;
+
     @media screen and (max-width: 1199px) { & { padding: 10px 0 } }
 }
 
@@ -91,13 +93,13 @@ header {
 
 .header-tel-link { @extend %link-settings }
 
-.header-social-net {
+.header-social-list {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.header-social-net-wrapper { @extend %social-net-settings }
+.header-social-net-item { @extend %social-net-settings }
 
 // down section
 
@@ -106,7 +108,7 @@ header {
     justify-content: flex-end;
 }
 
-.header-navigation-ul {
+.header-navigation-list {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -192,12 +194,12 @@ header {
     align-self: stretch;
 }
 
-.header-mobile-contacts-ul {
+.header-mobile-contacts-list {
     display: flex;
     align-items: center;
 }
 
-.header-mobile-contacts-li {
+.header-mobile-contacts-item {
     width: 36px;
 
     display: flex;

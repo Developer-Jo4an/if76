@@ -1,0 +1,96 @@
+@import '../../../styles/global';
+
+.services-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+
+    padding: 35px 20px;
+
+    background-color: $main-red-color;
+}
+
+.services-wrapper {
+    width: 1250px;
+
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1250px) { width: auto }
+}
+
+.services-header {
+    text-align: center;
+
+    @media screen and (max-width: 500px) { font-size: 20px }
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (max-width: 768px) { gap: 30px }
+}
+
+.services-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 40px minmax(60px, auto);
+    grid-gap: 10px;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.services-item-sign-wrapper {
+    grid-row: 1 / 3; // span 2
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-item-sign {
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: #000;
+
+    svg {
+        width: 60%;
+        height: 60%;
+
+        color: $main-red-color
+    }
+}
+
+.services-item-title {
+    display: flex;
+    align-items: center;
+
+    font-size: 28px;
+
+    font-family: custom-bold, Manrope, sans-serif;
+
+    @media screen and (max-width: 700px) { font-size: 24px }
+    @media screen and (max-width: 500px) { font-size: 20px }
+}
+
+.services-item-description {
+    display: flex;
+    align-items: center;
+
+    text-align: justify;
+}

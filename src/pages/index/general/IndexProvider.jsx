@@ -1,9 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 
 const indexContext = React.createContext()
 export const useIndexContext = () => useContext(indexContext)
 
 const IndexProvider = ({ children }) => {
+
+
     return (
         <indexContext.Provider value={{
 
