@@ -1,0 +1,56 @@
+@import '../../../styles/global';
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 20px;
+
+    background-color: $main-black-color;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 90;
+
+    @media screen and (max-width: 1300px) { display: none }
+}
+
+.header-down-section-wrapper {
+    width: 1300px;
+
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 1300px) { width: auto; align-self: stretch }
+}
+
+.header-navigation-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-navigation-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-navigation-info {
+    color: #fff;
+
+    font-size: 18px;
+
+    transition: .3s;
+
+    cursor: pointer;
+
+    &:hover, &:active { opacity: 0.7 }
+}
+
+.header-to-sales-link { color: $main-red-color }
+
+.header-navigation-between-line { color: #fff; opacity: 0.3 }

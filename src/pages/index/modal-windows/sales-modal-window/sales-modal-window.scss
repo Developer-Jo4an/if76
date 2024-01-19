@@ -1,0 +1,175 @@
+@import '../../../../styles/global';
+
+.sales-modal-window {
+    width: 700px;
+    height: 80vh;
+
+    position: relative;
+
+    background-color: #fff;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    border: 2px solid $main-red-color;
+
+    overflow-y: scroll;
+    &::-webkit-scrollbar { display: none }
+
+    @media screen and (max-width: 740px) {
+        width: 90vw;
+        height: 90vh;
+    }
+}
+
+.sales-modal-window-close-btn {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    cursor: pointer;
+
+    svg { transition: .3s }
+
+    &:hover, &:active { svg { opacity: 0.7 } }
+}
+
+.sales-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.sale-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+}
+
+.sale-interval {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+
+.sale-interval-date, .sale-interval-dates-split {
+    font-family: custom-semi, Manrope, sans-serif;
+
+    color: $main-red-color;
+
+    font-size: 24px;
+
+    @media screen and (max-width: 740px) { font-size: 16px }
+}
+
+.sale-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    font-family: custom-semi, Manrope, sans-serif;
+
+    font-size: 28px;
+
+    @media screen and (max-width: 740px) { font-size: 20px }
+}
+.sale-text {
+    grid-column: span 2;
+
+    font-size: 20px;
+
+    text-align: justify;
+
+    @media screen and (max-width: 740px) { font-size: 16px }
+}
+
+.sale-tickets {
+    grid-column: span 2;
+}
+
+.sale-tickets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sale-ticket-item {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.sale-ticket-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: custom-semi, Manrope, sans-serif;
+
+    @media screen and (max-width: 740px) { font-size: 12px }
+}
+
+.sale-ticket-name-sign {
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: $main-red-color;
+}
+
+.sale-ticket-prev-price {
+    white-space: nowrap;
+    font-size: 14px;
+
+    opacity: 0.7;
+
+    position: relative;
+
+    &::before {
+        content: '';
+
+        width: 80%;
+        height: 1px;
+
+        position: absolute;
+        left: 0;
+        bottom: 8px;
+
+        background-color: #000;
+
+        transform: rotate(20deg);
+
+    }
+}
+
+.sale-ticket-new-price {
+    white-space: nowrap;
+    font-size: 18px;
+
+    color: $main-red-color;
+
+    font-family: custom-semi, Manrope, sans-serif;
+}
+
+.last-sale {
+    border-bottom: 2px solid $main-red-color;
+
+    padding-bottom: 20px;
+}

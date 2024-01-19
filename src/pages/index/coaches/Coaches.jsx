@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ModalWindowCenter from '../../../components/modal-windows/modal-window-center/ModalWindowCenter'
 import CoachModalWindow from './modal-window/CoachModalWindow'
 
+import { useIndexContext } from '../general/IndexProvider'
 import { coachesArray } from './coaches-array'
 
 import './coaches.css'
@@ -15,6 +16,8 @@ const MemoCoachModalWindow = React.memo(CoachModalWindow, (prevProps, nextProps)
 
 const Coaches = () => {
 
+	const { coachesRef } = useIndexContext()
+
 	const [activeCoach, setActiveCoach] = useState(false)
 	const [coachMW, setCoachMW] = useState(false)
 
@@ -24,7 +27,7 @@ const Coaches = () => {
 	}
 
 	return (
-		<section className={'coaches-section'}>
+		<section id={'coaches'} className={'coaches-section'} ref={ coachesRef }>
 			<h2 className={'coaches-header'}>ПЕРСОНАЛЬНЫЕ ТРЕНЕРЫ</h2>
 			<div className={'coaches-wrapper'}>
 				<ul className={'coaches-list'}>{ coachesArray.map(coach => coach.getStaticComponent(showCoachModalWindow)) }</ul>

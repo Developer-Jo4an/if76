@@ -1,6 +1,7 @@
 @import '../../styles/global';
 
 footer {
+    align-self: stretch;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,12 +21,17 @@ footer {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+
+    @media screen and (max-width: 1250px) { width: auto }
+    @media screen and (max-width: 700px) { flex-direction: column; gap: 20px; justify-content: center }
 }
 
 .footer-right-section, .footer-left-section {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @media screen and (max-width: 700px) { align-items: center }
 }
 
 .footer-main-info-link {

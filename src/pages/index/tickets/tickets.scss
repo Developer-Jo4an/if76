@@ -12,6 +12,8 @@
     background-image: url('../../../images/backgrounds/price-background.png');
     background-repeat: no-repeat;
     background-position: left -63px;
+
+    @media screen and (max-width: 700px) { padding: 24px 16px }
 }
 
 .tickets-wrapper {

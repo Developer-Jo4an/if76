@@ -1,10 +1,15 @@
 import React from 'react'
 
+import { useIndexContext } from '../general/IndexProvider'
+
 import './contacts.css'
 
 const Contacts = () => {
+
+	const { contactsRef } = useIndexContext()
+
 	return (
-		<section className={'contacts-section'}>
+		<section id={'contacts'} className={'contacts-section'} ref={ contactsRef }>
 			<div className={'contacts-wrapper'}>
 				<div className={'contacts-left-part'}>
 					<ul className={'contacts-info-list'}>

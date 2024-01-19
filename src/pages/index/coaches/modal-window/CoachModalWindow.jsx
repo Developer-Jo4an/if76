@@ -22,7 +22,7 @@ const CoachModalWindow = ({ coach, closeFunc }) => {
 
 	return (
 		<div className={'coach-modal-window'}>
-			<button className={'coach-modal-window-close-btn'} onClick={closeFunc}><FontAwesomeIcon icon={ faXmark }/></button>
+			<button className={'coach-modal-window-close-btn'} onClick={ closeFunc }><FontAwesomeIcon icon={ faXmark }/></button>
 			<div className={'coach-information'}>
 				<div className={'coach-img-wrapper'}>
 					<img src={ img } alt='coach-img' className={'coach-img'}/>

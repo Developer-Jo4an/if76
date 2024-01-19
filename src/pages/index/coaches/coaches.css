@@ -6,6 +6,11 @@
   gap: 35px;
   padding: 35px 20px;
 }
+@media screen and (max-width: 700px) {
+  .coaches-section {
+    padding: 24px 16px;
+  }
+}
 
 .coaches-header {
   text-align: center;

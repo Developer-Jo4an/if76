@@ -1,7 +1,7 @@
 import React from 'react'
-import Logo from '../../images/logo/logo.png'
+import Logo from '../../../images/logo/logo.png'
 
-import { useNavigate } from 'react-router-dom'
+import { useIndexContext } from '../../../pages/index/general/IndexProvider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faWhatsapp, faVk, faTelegram, faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -10,7 +10,8 @@ import './header.css'
 
 const Header = () => {
 
-    const navigate = useNavigate()
+	const { mobileNavigationMW, mobileHeaderRef } = useIndexContext()
+	const [_, setMobileNavState] = mobileNavigationMW
 
 	const headerContactsList = [
 		{ sign: faLocationDot, link: 'https://yandex.ru/maps/org/zheleznaya_semya/56822750743/?ll=39.870718%2C57.567495&z=17' },
@@ -52,27 +53,10 @@ const Header = () => {
                         <ul className={'header-social-list'}>{ headerContactsList.map(desktopContact)}</ul>
                     </div>
                 </div>
-                <div className={'header-down-section-wrapper'}>
-                    <nav className={'header-navigation'}>
-                        <ul className={'header-navigation-list'}>
-                            <li className={'header-navigation-item'}>
-                                <div className={'header-navigation-info header-to-sales-link'} onClick={() => navigate('/sales')}>Акции</div>
-                            </li>
-                            <div className={'header-navigation-between-line'}>|</div>
-                            <li className={'header-navigation-item'}><div className={'header-navigation-info'}>Услуги</div></li>
-                            <div className={'header-navigation-between-line'}>|</div>
-                            <li className={'header-navigation-item'}><div className={'header-navigation-info'}>Тренеры</div></li>
-                            <div className={'header-navigation-between-line'}>|</div>
-                            <li className={'header-navigation-item'}><div className={'header-navigation-info'}>Цены</div></li>
-                            <div className={'header-navigation-between-line'}>|</div>
-                            <li className={'header-navigation-item'}><div className={'header-navigation-info'}>Контакты</div></li>
-                        </ul>
-                    </nav>
-                </div>
             </div>
-            <div className={'header-mobile-version'}>
+            <div className={'header-mobile-version'} ref={ mobileHeaderRef }>
                 <div className={'header-mobile-wrapper'}>
-                    <div className={'header-mobile-left-section'}>
+                    <div className={'header-mobile-left-section'} onClick={() => setMobileNavState(true)}>
                         <button className={'header-mobile-bars'}><FontAwesomeIcon icon={ faBars }/></button>
 	                    <div className={'header-mobile-menu-label'}>МЕНЮ</div>
                     </div>

@@ -3,6 +3,8 @@ import React from 'react'
 import Logo from '../images/logo/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+const keyGen = name => Math.random().toString() + name + Math.random().toString()
+
 export class Service {
 	constructor(title, sign, description) {
 		this.title = title
@@ -81,7 +83,7 @@ export class Ticket {
 
 	get getComponent() {
 		return (
-			<li className={'ticket'} key={ this.name }>
+			<li className={'ticket'} key={ keyGen(this.name) }>
 				<div className={'ticket-type'}>{ this.type }</div>
 				<div className={'ticket-name'}>{ this.name }</div>
 				<div className={'ticket-price'}>{ this.price }</div>
@@ -91,5 +93,39 @@ export class Ticket {
 			</li>
 		)
 	}
-
 }
+
+export class Sale {
+	constructor(interval, name, text, saleTickets) {
+		this.interval = interval
+		this.name = name
+		this.text = text
+		this.saleTickets = saleTickets
+	}
+
+	get getComponent() {
+		return (
+			<li className={'sale-item'} key={ this.name }>
+				<div className={'sale-name'}>{ this.name }</div>
+				<div className={'sale-interval'}>
+					<div className={'sale-interval-date'}>{ this.interval[0] }</div>
+					<div className={'sale-interval-dates-split'}> - </div>
+					<div className={'sale-interval-date'}>{ this.interval[1] }</div>
+				</div>
+				<div className={'sale-text'}>{ this.text }</div>
+				<div className={'sale-tickets'}>
+					<ul className={'sale-tickets-list'}>
+						{ this.saleTickets.map(ticket => (
+							<li className={'sale-ticket-item'} key={ ticket.name }>
+								<div className={'sale-ticket-name'}><div className={'sale-ticket-name-sign'}></div>{ ticket.name }</div>
+								<div className={'sale-ticket-new-price'}>{ ticket.newPrice } р.</div>
+								<div className={'sale-ticket-prev-price'}>{ ticket.prevPrice } р.</div>
+							</li>
+						)) }
+					</ul>
+				</div>
+			</li>
+		)
+	}
+}
+

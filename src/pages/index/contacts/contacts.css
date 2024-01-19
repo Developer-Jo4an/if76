@@ -4,6 +4,11 @@
   align-items: center;
   padding: 35px 20px;
 }
+@media screen and (max-width: 700px) {
+  .contacts-section {
+    padding: 24px 16px;
+  }
+}
 
 .contacts-wrapper {
   width: 1250px;

@@ -1,0 +1,74 @@
+.more-header {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 20px;
+  background-color: #2b2a29;
+}
+@media screen and (max-width: 700px) {
+  .more-header {
+    padding: 20px;
+  }
+}
+
+.more-header-wrapper {
+  width: 1250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.more-header-header {
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .more-header-header {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .more-header-header {
+    font-size: 16px;
+  }
+}
+
+.more-header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.more-header-link-main {
+  color: #c73529;
+  font-family: custom-semi, Manrope, sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@media screen and (max-width: 700px) {
+  .more-header-link-main {
+    font-size: 14px;
+  }
+}
+.more-header-link-main:hover, .more-header-link-main:active {
+  opacity: 0.7;
+}
+
+.more-header-link {
+  font-family: custom-semi, Manrope, sans-serif;
+  color: #fff;
+}
+@media screen and (max-width: 700px) {
+  .more-header-link {
+    font-size: 14px;
+  }
+}
+
+.more-header-between-slash {
+  color: #fff;
+}
+
+/*# sourceMappingURL=more-header.css.map */

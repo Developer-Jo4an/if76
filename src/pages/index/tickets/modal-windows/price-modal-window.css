@@ -1,0 +1,42 @@
+.price-modal-window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 2px solid #c73529;
+  padding: 2px;
+  overflow: hidden;
+}
+
+.price-img {
+  height: 80vh;
+  border-radius: 20px;
+}
+@media screen and (max-width: 700px) {
+  .price-img {
+    width: 80vw;
+    height: auto;
+  }
+}
+
+.price-modal-window-close-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.price-modal-window-close-btn svg {
+  width: 20px;
+  height: 20px;
+  transition: 0.3s;
+}
+.price-modal-window-close-btn:hover svg, .price-modal-window-close-btn:active svg {
+  opacity: 0.7;
+}
+
+/*# sourceMappingURL=price-modal-window.css.map */

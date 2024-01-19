@@ -6,6 +6,11 @@
   padding: 35px 20px;
   background-color: #c73529;
 }
+@media screen and (max-width: 700px) {
+  .services-section {
+    padding: 24px 16px;
+  }
+}
 
 .services-wrapper {
   width: 1250px;
