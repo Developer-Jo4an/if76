@@ -82,7 +82,7 @@ export class Ticket {
 
 	get getComponent() {
 		return (
-			<li className={'ticket'} key={ this.name }>
+			<li className={'ticket'} key={ this.name + this.type }>
 				<div className={'ticket-type'}>{ this.type }</div>
 				<div className={'ticket-name'}>{ this.name }</div>
 				<div className={'ticket-price'}>{ this.price }</div>

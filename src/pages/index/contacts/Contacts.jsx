@@ -29,6 +29,13 @@ const Contacts = () => {
 						src='https://yandex.ru/map-widget/v1/?um=constructor%3A28351396028f0969c9a5dabe18036464883dcd274fd3b8e4bc6bdc18a2fcb13e&amp;source=constructor'
 						width='100%' height='100%' frameBorder='0'>
 					</iframe>
+					<iframe
+						src="https://yandex.ru/sprav/widget/rating-badge/56822750743?type=award" width="150"
+						height="50"
+						frameBorder="0"
+						className={'contacts-trusted-place'}
+					>
+					</iframe>
 				</div>
 			</div>
 		</section>

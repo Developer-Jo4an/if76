@@ -10,8 +10,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={ <Index/> } />
-          <Route path='/privacy-policy' element={ <PrivacyPolicy/> } />
-          <Route path='/personal-data' element={ <PersonalData/> } />
+          <Route path='/privacy-policy' element={ <PrivacyPolicy /> } />
+          <Route path='/personal-data' element={ <PersonalData /> } />
         </Routes>
       </BrowserRouter>
   )

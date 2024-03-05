@@ -52,11 +52,18 @@
 .contacts-map-wrapper {
   width: 500px;
   height: 300px;
+  position: relative;
 }
 @media screen and (max-width: 540px) {
   .contacts-map-wrapper {
     width: calc(100vw - 40px);
   }
+}
+
+.contacts-trusted-place {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 /*# sourceMappingURL=contacts.css.map */
