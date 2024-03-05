@@ -1,6 +1,9 @@
 .coach-modal-window {
   width: 700px;
   max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   position: relative;
   overflow: scroll;
   background-color: #fff;
@@ -93,6 +96,40 @@
   flex-shrink: 0;
   background-color: #c73529;
   border-radius: 50%;
+}
+
+.coach-price {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.coach-price-header {
+  font-size: 20px;
+  font-family: custom-semi, Manrope, sans-serif;
+}
+
+.coach-price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 12px;
+}
+
+.coach-price-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.coach-price-item-name {
+  font-size: 18px;
+}
+
+.coach-price-item-amount {
+  font-size: 18px;
+  font-family: custom-semi, Manrope, sans-serif;
+  color: #c73529;
 }
 
 /*# sourceMappingURL=coach-modal-window.css.map */

@@ -54,11 +54,12 @@ export class Bot {
 }
 
 export class Coach {
-	constructor(name, description, skills, img) {
+	constructor(name, description, skills, img, price) {
 		this.name = name
 		this.description = description
 		this.skills = skills
 		this.img = img
+		this.price = price
 	}
 
 	getStaticComponent(clickFunction) {

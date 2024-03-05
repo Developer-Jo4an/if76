@@ -22,7 +22,12 @@ export const coachesArray = [
 	'Знания биохимии и биомеханики организма',
 	'Индивидуальный тренировочный план'
 	 ],
-		Alex
+	 Alex,
+	{
+		lesson: { name: 'Разовое занятие', amount: 700 },
+		eightLessons: { name: '8 Занятий', amount: 4800 },
+		twelveLessons: { name: '12 Занятий', amount: 6000 }
+	}
 	),
 	new Coach(
 		'МИХАИЛ РАЖЕВ',
@@ -39,7 +44,12 @@ export const coachesArray = [
 		'Знание биохимии и биомеханики организма',
 		'Индивидуальный тренировочный план'
 		],
-		Mikhail
+		Mikhail,
+		{
+			lesson: { name: 'Разовое занятие', amount: 600 },
+			eightLessons: { name: '8 Занятий', amount: 4000 },
+			twelveLessons: { name: '12 Занятий', amount: 5400 }
+		}
 	),
 	new Coach(
 		'ИВАН БОРОЗНЯК',
@@ -56,7 +66,12 @@ export const coachesArray = [
 		'Знание анатомии и биомеханики',
 		'Индивидуальный тренировочный план'
 		],
-		Ivan
+		Ivan,
+		{
+			lesson: { name: 'Разовое занятие', amount: 600 },
+			eightLessons: { name: '8 Занятий', amount: 4000 },
+			twelveLessons: { name: '12 Занятий', amount: 5400 }
+		}
 	),
 	new Coach(
 		'КРИСТИНА ЮЗБЕКОВА',
@@ -71,6 +86,11 @@ export const coachesArray = [
 		'Подготовка к соревнованиям в категории «Фитнес бикини»',
 		'Индивидуальный тренировочный план'
 		],
-		Cris
+		Cris,
+		{
+			lesson: { name: 'Разовое занятие', amount: 600 },
+			eightLessons: { name: '8 Занятий', amount: 4000 },
+			twelveLessons: { name: '12 Занятий', amount: 5400 }
+		}
 	)
 ]

@@ -9,13 +9,23 @@ const CoachModalWindow = ({ coach, closeFunc }) => {
 
 	if (!coach) return null
 
-	const { name, img, description, skills } = coach
+	const { name, img, description, skills, price } = coach
 
 	const skillComponent = skill => {
 		return (
 			<li className={'coach-skill-item'} key={ skill }>
 				<div className={'coach-skill-item-marker'}></div>
 				<div className={'coach-skill-item-info'}>{ skill }</div>
+			</li>
+		)
+	}
+
+	const priceComponent = ([_, { name, amount }]) => {
+		return (
+			<li className={'coach-price-item'} key={ name }>
+				<div className={'coach-price-item-name'}>{ name }</div>
+				-
+				<div className={'coach-price-item-amount'}>{ amount }р.</div>
 			</li>
 		)
 	}
@@ -31,6 +41,11 @@ const CoachModalWindow = ({ coach, closeFunc }) => {
 				<div className={'coach-description'}>{ description }</div>
 				<ul className={'coach-skills-list'}>{ skills.map(skillComponent) }</ul>
 			</div>
+			<div className={'coach-price'}>
+				<div className={'coach-price-header'}>Цены:</div>
+				<ul className={'coach-price-list'}>{ Object.entries(price).map(priceComponent) }</ul>
+			</div>
+
 		</div>
 	)
 }
