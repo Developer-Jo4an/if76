@@ -1,9 +1,8 @@
 import React from 'react'
 
 import Logo from '../images/logo/logo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const keyGen = name => Math.random().toString() + name + Math.random().toString()
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export class Service {
 	constructor(title, sign, description) {
@@ -83,7 +82,7 @@ export class Ticket {
 
 	get getComponent() {
 		return (
-			<li className={'ticket'} key={ keyGen(this.name) }>
+			<li className={'ticket'} key={ this.name }>
 				<div className={'ticket-type'}>{ this.type }</div>
 				<div className={'ticket-name'}>{ this.name }</div>
 				<div className={'ticket-price'}>{ this.price }</div>

@@ -5,6 +5,9 @@ import Footer from '../../../components/footer/Footer'
 import './privacy-policy.css'
 
 const PrivacyPolicy = () => {
+
+    window.scrollTo(0, 0)
+
     return (
         <div className={'privacy-policy'}>
             <MoreHeader pageName={'Политика конфиденциальности'}/>

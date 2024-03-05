@@ -13,8 +13,8 @@
 }
 @media screen and (max-width: 740px) {
   .sales-modal-window {
-    width: 90vw;
-    height: 90vh;
+    width: 80vw;
+    height: 80vh;
   }
 }
 

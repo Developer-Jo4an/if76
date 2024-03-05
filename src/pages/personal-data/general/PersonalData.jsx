@@ -1,10 +1,13 @@
 import React from 'react'
 import MoreHeader from '../../../components/header/more-header/MoreHeader'
+import Footer from '../../../components/footer/Footer'
 
 import './personal-data.css'
-import Footer from '../../../components/footer/Footer';
 
 const PersonalData = () => {
+
+    window.scrollTo(0, 0)
+
     return (
         <div className={'personal-data'}>
             <MoreHeader pageName={'Согласие на обработку персональных данных'}/>
